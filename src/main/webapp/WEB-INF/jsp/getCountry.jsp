@@ -8,10 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>adasd</h1>
-	
-	<c:if test="${not empty lists }" var="flag"></c:if>
-	flag: ${flag }
 	<c:forEach var="list" items="${lists }">
 		<p>${list.countryname }</p>
 	</c:forEach>

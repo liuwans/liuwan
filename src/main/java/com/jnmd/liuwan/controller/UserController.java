@@ -28,5 +28,8 @@ public class UserController {
 		System.out.println(lists);
 		return mv;
 	}
+	public static void main(){
+	    System.out.println("eeeee");
+	}
 
 }

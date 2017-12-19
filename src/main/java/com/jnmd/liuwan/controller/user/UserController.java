@@ -22,19 +22,15 @@ public class UserController {
 	private UserService userservice;
 	
 	@RequestMapping("/getCountry")
-	public ModelAndView getCountry(String uname,String password){
+	public String getCountry(String uname,String password){
 		Map<String, Object> map=new HashMap<>();
 		map.put("uname", uname);
 		map.put("password", password);
 		List<User> lists = userservice.getCountry(map);
-		ModelAndView mv = new ModelAndView();
 		if(lists.size()==0){
-			mv.setViewName("registerUser");
-			return mv;
+			return "forward:/WEB-INF/jsp/user/registerUser.jsp";
 		}else{
-			mv.setViewName("index");
-			mv.addObject("uname", uname);
-			return mv;
+			return "forward:/index.jsp";
 		}
 	}
 	

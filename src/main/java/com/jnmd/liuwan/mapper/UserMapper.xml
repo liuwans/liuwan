@@ -5,8 +5,9 @@
 
 <mapper namespace="com.jnmd.liuwan.mapper.UserMapper">
 	<select id="getCountry" resultType="User">
-		select countrycode,countryname
-		from country
+		select uid,uname,password
+		from user
+		where uname=#{uname} and password=#{password}
 	</select>
 </mapper>
 	

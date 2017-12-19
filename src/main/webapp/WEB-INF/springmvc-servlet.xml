@@ -20,6 +20,7 @@
 	 -->
 	<mvc:resources location="/css/" mapping="/css/**"/>
 	<mvc:resources location="/img/" mapping="/img/**"/>
+	<mvc:resources location="/js/" mapping="/js/**"/>
 	
 	<!-- fileupload bean -->
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
@@ -28,7 +29,7 @@
 	</bean>
 	
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/jsp/"/>
+		<property name="prefix" value="/WEB-INF/jsp/user/"/>
 		<property name="suffix" value=".jsp"/>
 	</bean>
 	

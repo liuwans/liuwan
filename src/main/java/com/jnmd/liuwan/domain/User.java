@@ -1,35 +1,30 @@
 package com.jnmd.liuwan.domain;
 
 public class User {
-	private int countrycode;
-	private String countryname;
-	public User(int countrycode, String countryname) {
-		super();
-		this.countrycode = countrycode;
-		this.countryname = countryname;
-	}
+	private int uid;
+	private String uname;
+	private String password;
 	public User() {
 		super();
 	}
-	public User(int countrycode) {
+	public User(int uid) {
 		super();
-		this.countrycode = countrycode;
+		this.uid = uid;
 	}
-	public int getCountrycode() {
-		return countrycode;
+	public User(String uname, String password) {
+		super();
+		this.uname = uname;
+		this.password = password;
 	}
-	public void setCountrycode(int countrycode) {
-		this.countrycode = countrycode;
-	}
-	public String getCountryname() {
-		return countryname;
-	}
-	public void setCountryname(String countryname) {
-		this.countryname = countryname;
+	public User(int uid, String uname, String password) {
+		super();
+		this.uid = uid;
+		this.uname = uname;
+		this.password = password;
 	}
 	@Override
 	public String toString() {
-		return "User [countrycode=" + countrycode + ", countryname=" + countryname + "]";
+		return "User [uid=" + uid + ", uname=" + uname + ", password=" + password + "]";
 	}
 	
 }

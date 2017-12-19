@@ -1,6 +1,7 @@
 package com.jnmd.liuwan.service;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -18,7 +19,7 @@ public class UserService {
 	private UserMapper usermapper;
 	
 	@Transactional(propagation=Propagation.SUPPORTS)
-	public List<User> getCountry(){
-		return usermapper.getCountry();
+	public List<User> getCountry(Map<String, Object> map){
+		return usermapper.getCountry(map);
 	}
 }

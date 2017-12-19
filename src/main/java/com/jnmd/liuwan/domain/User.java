@@ -4,6 +4,7 @@ public class User {
 	private int uid;
 	private String uname;
 	private String password;
+	private int sex;
 	public User() {
 		super();
 	}

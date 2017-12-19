@@ -30,7 +30,7 @@ public class UserController {
 		if(lists.size()==0){
 			return "forward:/WEB-INF/jsp/user/registerUser.jsp";
 		}else{
-			System.out.println("111");
+
 			return "forward:/index.jsp";
 			
 		}

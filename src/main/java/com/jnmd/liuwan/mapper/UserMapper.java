@@ -11,4 +11,6 @@ import com.jnmd.liuwan.domain.User;
 public interface UserMapper {
 	
 	public List<User> getCountry(Map<String, Object> map);
+	
+	public void saveUser(User user);
 }

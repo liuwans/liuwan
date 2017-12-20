@@ -1,0 +1,133 @@
+@CHARSET "UTF-8";
+*{margin:0; padding:0; list-style:none;}
+a{text-decoration: none;cursor: pointer;}
+#content{
+	margin: 0 auto;
+	width: 650px;
+	overflow: hidden;
+}
+/* ===============选择块的样式============ */
+#top{
+	height: 120px;
+	background: url(../img/pageimg/liu.png) center center no-repeat;
+	margin-bottom: 25px;
+	box-shadow: 0 6px 12px rgba(0,0,0,.088);
+}
+/* ===============表单的样式============ */
+.con_top{
+	height: 20px;
+	overflow: hidden;
+	padding: 5px 0 10px 0;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 15px;
+}
+.con_left{
+	width: 5px;
+	height: 22px;
+	background-color: #0080EB;
+	float: left;
+	margin-right: 5px;
+}
+.con_people{
+	height: 20px;
+	line-height: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	float: left;
+}
+#con_menu{
+	overflow: hidden;
+}
+.menu_content{
+	width: 350px;
+	height: 25px;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 6px 12px;
+	margin-top: 20px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+}
+::-webkit-input-placeholder{/*Webkit browsers*/
+    color:#d9d9d9;
+}
+:-moz-placeholder{/*Mozilla Firefox 4 to 8*/
+   color:#d9d9d9;
+}
+::moz-placeholder{/*Mozilla Firefox 19+*/
+   color:#d9d9d9;
+}
+:-ms-input-placeholder{/*Internet Explorer 10+*/
+    color:#d9d9d9;
+}
+.menu_p{
+	font-size: 14px;
+	font-weight: bold;
+	color: #767676;
+	margin-left: 40px;
+}
+#con_menu .ss{
+	width: 377px;
+	height: 40px;
+}
+.menu_sex{
+	margin: 20px 0 0 40px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #767676;
+}
+.sex_to{
+	width: 15px;
+	height: 14px;
+	margin-left: 20px;
+}
+.menu_res{
+	float: right;
+	height: 33px;
+	border: 0;
+	color: blue;
+	cursor: pointer;
+	background-color: #fff;
+	font-size: 15px;
+	margin-top: 55px;
+}
+.menu_res:hover{
+	color: #37ccfa;
+}
+.menu_sub{
+	float: right;
+	width: 152px;
+	height: 33px;
+	border: 0;
+	color: #fff;
+	background-color: #0083E8;
+	cursor: pointer;
+	border-radius: 4px;
+	margin: 40px 15px 10px 20px;
+}
+.menu_sub:hover{
+	background-color: #37ccfa;
+}
+/* ===============底部的样式============ */
+#footer{
+	overflow: hidden;
+	background: #ccc;
+	padding: 10px 0 0 0;
+
+}
+.p1{
+	margin: 0 auto;
+	width: 600px;
+	font-size: 14px;
+	text-align: center;
+	margin-top: 20px;
+	font-weight: normal;
+}
+.p2{
+	margin: 0 auto;
+	width: 600px;
+	font-size: 12px;
+	text-align: center;
+	padding: 0 0 20px 0;
+	font-weight: normal;
+}

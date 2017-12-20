@@ -9,5 +9,12 @@
 		from user
 		where uname=#{uname} and password=#{password}
 	</select>
+	<insert id="saveUser">
+		<selectKey keyColumn="uid" keyProperty="uid" resultType="int" order="AFTER">
+			select @@identity as uid
+		</selectKey>
+		insert into user(uname,password,mphone,countrycode,birthday,realname,sex,tid,papersid,paperscode)
+		values(#{uname},#{password},#{mphone},#{countrycode},#{birthday},#{realname},#{sex},#{tid},#{papersid},#{paperscode})
+	</insert>
 </mapper>
 	

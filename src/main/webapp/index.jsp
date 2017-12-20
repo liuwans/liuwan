@@ -19,8 +19,23 @@
 				<a href="#" class="top1"></a>
 				<input type="text" name="" value="">
 				<a href="#" class="top2">行李箱</a>
-				<a href="#" class="top3">注册</a>
-				<a href="getUser" class="top3">登陆</a>
+				<c:choose>
+				   <c:when test="${empty uname }">
+				   		<a href="getLongin" class="top3">注册</a>
+				   </c:when>
+				   <c:otherwise> 
+				   		<a href="logoutUser?uname=${uname }" class="top3">注销</a>
+				   </c:otherwise>
+				 </c:choose>
+				<c:choose>
+				   <c:when test="${empty uname }">
+				   		<a href="getUser" class="top3">登陆</a>
+				   </c:when>
+				   <c:otherwise> 
+				   		<a style="color: red;" href="#" class="top3">${uname }</a>
+				   </c:otherwise>
+				 </c:choose>
+				
 				<a href="#" class="top5"></a>
 			</div>
 			<div class="head1_b">

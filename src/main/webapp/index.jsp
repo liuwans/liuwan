@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>首页</title>
 <link rel="stylesheet" href="css/liuwan.css">
 <link rel="stylesheet" href="css/reset.css">
 </head>
@@ -42,7 +42,7 @@
 				<a href="#" class="button1"><b>第一次</b></a>
 				<a href="#"><b>目的地</b></a>
 				<a href="#"><b>自定行程</b></a>
-				<a href="#"><b>游记</b></a>
+				<a href="# "><b>游记</b></a>
 				<a href="#"><b>特产</b></a>
 				<a href="#"><b>优惠</b></a>
 				<a href="#"><b>环岛巴士</b></a>

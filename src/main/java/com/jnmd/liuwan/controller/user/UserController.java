@@ -71,16 +71,19 @@ public class UserController {
 	//注册提交
 	@RequestMapping("/saveLongin")
 	public ModelAndView saveLongin(@ModelAttribute User user,String Twopassword,String birthdays) throws ParseException{
-		System.out.println(user.getSex());
-		Map<String, Object> map=validate(user,Twopassword);
+		Map<String, Object> map=validate(user,Twopassword,birthdays);
 		ModelAndView mv = new ModelAndView();
-		SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
-		Date birthdayes = format.parse(birthdays);
-		java.sql.Date birthday = new java.sql.Date(birthdayes.getTime());
-		user.setBirthday(birthday);
+		if(!(birthdays == null || "".equals(birthdays))){
+			SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
+			Date birthdayes = format.parse(birthdays);
+			java.sql.Date birthday = new java.sql.Date(birthdayes.getTime());
+			user.setBirthday(birthday);
+		}
 		if(map.size() > 0){
 			mv.setViewName("saveLongin");
 			mv.addObject("mapError",map);
+			mv.addObject("user",user);
+			mv.addObject("birthdays",birthdays);
 		}else{
 			userservice.saveUser(user);
 			mv.setViewName("saveLonginSucc");
@@ -89,7 +92,7 @@ public class UserController {
 	}
 	
 	
-	public Map<String, Object> validate(User user,String Twopassword){
+	public Map<String, Object> validate(User user,String Twopassword,String birthdays){
 		Map<String, Object> map=new HashMap<>();
 		if(null == user.getUname() || user.getUname().trim().equals("")){
 			map.put("unameError", "用户不能为空");
@@ -112,12 +115,15 @@ public class UserController {
 		if(user.getCountrycode() == 0){
 			map.put("countrycodeError", "请选择地区");
 		}
+		if(birthdays == null || "".equals(birthdays)){
+			map.put("birthdayError", "请选择生日");
+		}
 		if(null == user.getRealname() || user.getRealname().trim().equals("")){
 			map.put("realnameError", "姓名不能为空");
 		}else if(user.getRealname().trim().length() < 2 && user.getRealname().trim().length() < 10){
 			map.put("realnameError", "姓名最大为10个字符，最小为2个字符");
 		}
-		if(user.getSex() != 0 || user.getSex() != 1 || user.getSex() != 2){
+		if(user.getSex() != 1 && user.getSex() != 2 && user.getSex() != 3){
 			map.put("sexError", "请选择性别");
 		}
 		if(null == user.getPaperscode() || user.getPaperscode().trim().equals("")){

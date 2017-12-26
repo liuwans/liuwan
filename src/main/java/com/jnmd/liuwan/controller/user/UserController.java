@@ -54,8 +54,8 @@ public class UserController {
 	
 	//注销
 	@RequestMapping("/logoutUser")
-	public String logoutUser(String uname,HttpServletRequest request){
-		uname="";
+	public String logoutUser(HttpServletRequest request){
+		String uname="";
 		request.setAttribute("uname", uname);
 		return "forward:/index.jsp";
 	}

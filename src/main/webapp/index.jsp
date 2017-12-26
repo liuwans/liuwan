@@ -24,9 +24,9 @@
 				   		<a href="getLongin" class="top3">注册</a>
 				   </c:when>
 				   <c:otherwise> 
-				   		<a href="logoutUser?uname=${uname }" class="top3">注销</a>
+				   		<a href="logoutUser" class="top3">注销</a>
 				   </c:otherwise>
-				 </c:choose>
+				</c:choose>
 				<c:choose>
 				   <c:when test="${empty uname }">
 				   		<a href="getUser" class="top3">登陆</a>
@@ -42,8 +42,8 @@
 				<a href="#" class="button1"><b>第一次</b></a>
 				<a href="#"><b>目的地</b></a>
 				<a href="#"><b>自定行程</b></a>
-				<a href="# "><b>游记</b></a>
-				<a href="#"><b>特产</b></a>
+				<a href="#"><b>游记</b></a>
+				<a href="getGifts?pageNum=1"><b>特产</b></a>
 				<a href="#"><b>优惠</b></a>
 				<a href="#"><b>环岛巴士</b></a>
 			</div>

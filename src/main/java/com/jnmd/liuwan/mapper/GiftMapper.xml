@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jnmd.liuwan.mapper.GiftMapper">
+	<resultMap type="com.jnmd.liuwan.domain.Gift" id="GiftList">
+		<id column="gid" property="gid"/>
+		<result column="giftName" property="giftName"/>
+		<result column="giftDescribe" property="giftDescribe"/>
+		<result column="num" property="num"/>
+		<result column="tcomment" property="tcomment"/>
+		<collection property="giftpic" javaType="java.util.List" ofType="com.jnmd.liuwan.domain.Giftpic">
+			<id column="gpid" property="gpid"/>
+			<result column="picpath" property="picpath"/>
+		</collection>
+	</resultMap>
+	<select id="getGift" resultMap="GiftList">
+		select 
+			*
+		from 
+			gift g ,giftpic gp
+		where
+			g.gid = gp.gid	
+	</select>
+	<select id="getCount" resultType="Integer">
+		select count(*) from gift
+	</select>
+	<select id="getGifts" resultMap="GiftList">
+		select 
+			*
+		from 
+			gift g ,giftpic gp
+		where
+			g.gid = gp.gid
+		limit #{start} , #{pagesize}	
+	</select>
+</mapper>
+	

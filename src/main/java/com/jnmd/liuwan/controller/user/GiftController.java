@@ -49,6 +49,7 @@ public class GiftController {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("gift");
 		mv.addObject("list",list);
+		System.out.println("list");
 		return mv;
 	}
 	
